@@ -25,8 +25,6 @@
 # The distinct triplets are [-1,0,1] and [-1,-1,2].
 # Notice that the order of the output and the order of the triplets does not matter.
 
-from collections import Counter
-
 class Solution:
     def threeSum(self, nums):
         # nums = [-1, 0, 1, 2, -1, -4]
@@ -50,4 +48,5 @@ class Solution:
 solution = Solution()
 
 print(solution.threeSum([-1,0,1,2,-1,-4]))
-
+print(solution.threeSum([0,1,1]))
+print(solution.threeSum([0,0,0]))
