@@ -17,7 +17,16 @@
 
 class Solution:
     def maxProfit(self, prices):
-        pass
+        max_profit = 0
+        left,right = 0,1
+        while left < len(prices):
+            if right == len(prices): break
+            if prices[left] < prices[right]:
+                max_profit = max(max_profit,(prices[right] - prices[left]))
+            else:
+                left = right
+            right += 1
+        return max_profit
 
 solution = Solution()
 print(solution.maxProfit([7,1,5,3,6,4]))
